@@ -1,3 +1,5 @@
+export const ON_PAGE_LOAD = "/"
 export const COLLECTION_CATEGORY_TYPE = "category/:categoryType"
-export const COLLECTION_ITEM = "item/:itemId"
+export const COLLECTION_ITEM = "category/:categoryType/item/:itemId"
 export const SHOPPING_CART = "cart"
+export const PAGE_NOT_FOUND = "404"

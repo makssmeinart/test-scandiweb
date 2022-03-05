@@ -4,11 +4,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "airbnb",
-    "plugin:react/recommended",
-    "prettier"
-  ],
+  "extends": ["airbnb", "plugin:react/recommended", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -16,11 +12,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "html",
-    "prettier",
-    "react"
-  ],
+  "plugins": ["html", "prettier", "react"],
   "rules": {
     "no-shadow": "off",
     "no-alert": "error",
@@ -34,6 +26,8 @@
     "jsx-a11y/label-has-associated-control": "off",
     "react/prop-types": 0,
     "react/display-name": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "arrow-body-style": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }
