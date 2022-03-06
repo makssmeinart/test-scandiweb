@@ -6,19 +6,19 @@ import cartIcon from "../../f5-assets/a1-images/icons/whiteShoppingTrolley.svg"
 
 export class Product extends React.PureComponent {
   render() {
+    const { data } = this.props
+
     return (
       <li className={s.item}>
         <article>
-          <NavLink to="item/123123as">
-            <img
-              className={s.cover}
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNFSpQKxWQAHfnkaiy94XVzi3xG75WoyJE5w&usqp=CAU"
-              alt="Product"
-            />
+          <NavLink to={`item/${data.id}`}>
+            <img className={s.cover} src={data.gallery[0]} alt="Product" />
           </NavLink>
           <div className={s.info}>
-            <h2 className={commonS.product_name_small}>Apollo Running Short</h2>
-            <p className={commonS.product_price_small}>$50.00</p>
+            <h2 className={commonS.product_name_small}>{data.name}</h2>
+            <p className={commonS.product_price_small}>
+              {data.prices[0].currency.label} {data.prices[0].amount}
+            </p>
             <span className={s.cartIcon}>
               <img src={cartIcon} alt="Shopping-Cart" />
             </span>

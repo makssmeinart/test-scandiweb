@@ -6,11 +6,6 @@ import { GET_ALL_PRODUCTS } from "../../f4-graphql/g1-Queries/getProductsByCateg
 import { Products } from "../../f2-Components"
 
 export class CategoryContainerClass extends React.PureComponent {
-
-  componentDidMount() {
-
-  }
-
   render() {
     const { params, data } = this.props
 
@@ -21,12 +16,12 @@ export class CategoryContainerClass extends React.PureComponent {
           query={GET_ALL_PRODUCTS}
           variables={{
             input: {
-              title: "all",
+              title: params.categoryType,
             },
           }}
         >
           {({ data, loading, error }) => {
-            if(loading) {
+            if (loading) {
               return <h1>Spinner</h1>
             }
             return <Products data={data} />
