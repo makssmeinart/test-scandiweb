@@ -21,8 +21,8 @@ export class Header extends React.PureComponent {
               <NavLink to="category/tech" className={isActiveStyle}>
                 Tech
               </NavLink>
-              <NavLink to="category/cloths" className={isActiveStyle}>
-                Cloths
+              <NavLink to="category/clothes" className={isActiveStyle}>
+                Clothes
               </NavLink>
             </div>
             <div>
