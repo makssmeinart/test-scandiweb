@@ -1,4 +1,5 @@
 *.css
 *.json
 *.d.js
+*.d.ts
 *.test.js
